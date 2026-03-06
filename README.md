@@ -5,14 +5,25 @@
 ![ROOT](https://img.shields.io/badge/Data%20Analysis-ROOT-red)
 ![Physics](https://img.shields.io/badge/Field-Astroparticle%20Physics-green)
 
-Este proyecto estudia la **radiación producida por rayos cósmicos en la atmósfera terrestre**, con especial enfoque en el flujo de **muones** y su contribución a la dosis de radiación a distintas altitudes.
+En este proyecto desarrollé una herramienta para estudiar la **radiación producida por rayos cósmicos en la atmósfera terrestre**.
 
-El objetivo es combinar **modelos teóricos, simulaciones Monte Carlo y datos experimentales** para estimar cómo varía la radiación cósmica desde el nivel del mar hasta altitudes típicas de vuelo comercial.
+El objetivo fue construir un flujo de trabajo que combine **modelos teóricos, simulaciones Monte Carlo y datos experimentales** para estimar la **dosis de radiación cósmica a distintas altitudes**.
 
-Para ello se desarrolló un **modelo matemático** basado en un flujo de muones aproximadamente constante a nivel del suelo y una variación de este flujo con la altitud, asociada a cambios en la presión atmosférica.
-El modelo se ajusta utilizando valores propuestos por el **ISNAP (Institute for Structure and Nuclear Astrophysics)** de la Universidad de Notre Dame para la estimación de dosis de radiación.
+1. **Modelo Teórico:**
+   Desarrollé un modelo matemático que describe la variación del **flujo de muones con la altitud**, considerando efectos atmosféricos como cambios en la presión y la densidad del aire. A partir de este flujo se propuso una ecuación que fue ajustada a un modelo de cálculo de **dosis de radiación cósmica propuesto por el ISNAP (Institute for Structure and Nuclear Astrophysics)**, utilizándolo como referencia para las estimaciones de dosis.
 
----
+2. **Simulación Física:**
+   Utilicé simulaciones **Monte Carlo con CORSIKA** para modelar las cascadas atmosféricas producidas por rayos cósmicos primarios. Estas simulaciones permiten estimar el **flujo de partículas secundarias** y analizar la fracción relativa de distintos tipos de partículas a diferentes altitudes, con el objetivo de convertir estos flujos en estimaciones de dosis de radiación.
+
+3. **Procesamiento de Datos:**
+   Los resultados de las simulaciones fueron analizados utilizando herramientas en **Python y ROOT**, permitiendo identificar las partículas secundarias generadas y estudiar su distribución en función de la altitud.
+
+4. **Recopilación de Datos Experimentales:**
+   Se utilizaron **detectores de centelleo acoplados a tubos fotomultiplicadores (Scintillator + PMT)** para medir el flujo de muones a distintas altitudes. Las mediciones se realizaron durante intervalos de al menos **30 minutos en alturas fijas**, con el fin de obtener estimaciones experimentales del flujo de partículas.
+
+5. **Estimación de Dosis:**
+   Finalmente, el flujo de muones obtenido fue convertido en **estimaciones de dosis de radiación**, comparando tres enfoques: el modelo teórico desarrollado, los datos experimentales y los resultados obtenidos mediante simulaciones con **CORSIKA**.
+
 
 # 🔬 Motivación científica
 
