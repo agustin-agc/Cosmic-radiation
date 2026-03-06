@@ -9,6 +9,9 @@ Este proyecto estudia la **radiación producida por rayos cósmicos en la atmós
 
 El objetivo es combinar **modelos teóricos, simulaciones Monte Carlo y datos experimentales** para estimar cómo varía la radiación cósmica desde el nivel del mar hasta altitudes típicas de vuelo comercial.
 
+Para ello se desarrolló un **modelo matemático** basado en un flujo de muones aproximadamente constante a nivel del suelo y una variación de este flujo con la altitud, asociada a cambios en la presión atmosférica.
+El modelo se ajusta utilizando valores propuestos por el **ISNAP (Institute for Structure and Nuclear Astrophysics)** de la Universidad de Notre Dame para la estimación de dosis de radiación.
+
 ---
 
 # 🔬 Motivación científica
@@ -19,10 +22,10 @@ Entre estas partículas destacan los **muones**, que pueden atravesar grandes es
 
 Comprender su flujo permite:
 
-- estudiar la radiación atmosférica
-- estimar dosis en aviación
-- validar modelos de interacción hadrónica
-- comparar simulaciones con detectores reales
+* estudiar la radiación atmosférica
+* estimar dosis de radiación en aviación
+* validar modelos de interacción hadrónica
+* comparar simulaciones con detectores reales
 
 ---
 
@@ -36,10 +39,10 @@ Se utilizan simulaciones **Monte Carlo con CORSIKA** para modelar la interacció
 
 Configuración principal:
 
-- Modelo hadrónico de alta energía: **SIBYLL 2.3e**
-- Modelo de baja energía: **GHEISHA**
-- Geometría atmosférica curva
-- Producción explícita de muones
+* Modelo hadrónico de alta energía: **SIBYLL 2.3e**
+* Modelo de baja energía: **GHEISHA**
+* Geometría atmosférica curva
+* Producción explícita de muones
 
 Las simulaciones generan archivos con las partículas secundarias detectadas.
 
@@ -47,29 +50,29 @@ Las simulaciones generan archivos con las partículas secundarias detectadas.
 
 ## 2. Procesamiento de datos
 
-Los resultados de las simulaciones se analizan usando herramientas en Python y ROOT para:
+Los resultados de las simulaciones se analizan usando herramientas en **Python y ROOT** para:
 
-- identificar muones detectados
-- calcular el flujo de partículas
-- estudiar variaciones con la altitud
+* identificar muones detectados
+* calcular el flujo de partículas
+* estudiar variaciones con la altitud
 
 ---
 
 ## 3. Conversión a dosis de radiación
 
-A partir del flujo de muones se estima la **dosis equivalente de radiación** usando modelos simplificados de deposición de energía.
+A partir del flujo de muones se estima la **dosis equivalente de radiación** utilizando modelos simplificados de deposición de energía.
 
-Se comparan dos aproximaciones:
+Se comparan dos aproximaciones.
 
 **Modelo idealizado**
 
-\[
+[
 D(h) = 0.0375 \cdot 2^{h/1500}
-\]
+]
 
 **Modelo basado en simulación**
 
-La dosis se calcula usando el flujo simulado de muones y su contribución relativa a la radiación total.
+La dosis se calcula utilizando el flujo simulado de muones y su contribución relativa a la radiación total.
 
 ---
 
@@ -77,10 +80,10 @@ La dosis se calcula usando el flujo simulado de muones y su contribución relati
 
 El proyecto permite:
 
-- estudiar cómo varía el flujo de muones con la altitud
-- comparar modelos teóricos con simulaciones
-- estimar dosis de radiación en vuelos comerciales
-- validar simulaciones con datos experimentales
+* estudiar cómo varía el flujo de muones con la altitud
+* comparar modelos teóricos con simulaciones
+* estimar dosis de radiación en vuelos comerciales
+* validar simulaciones con datos experimentales
 
 ---
 
@@ -88,20 +91,19 @@ El proyecto permite:
 
 Este tipo de análisis es relevante en:
 
-- **física de astropartículas**
-- **radiación en aviación**
-- **monitoreo atmosférico**
-- **detectores de rayos cósmicos**
+* **física de astropartículas**
+* **radiación en aviación**
+* **monitoreo atmosférico**
+* **detectores de rayos cósmicos**
 
 ---
 
 # 🚀 Trabajo futuro
 
-- Comparación con datos experimentales usando detectores de centelleo
-- Integración con **FLUKA** para cálculos de dosis más precisos
-- Extensión del modelo a partículas adicionales (neutrones y electrones)
+* Comparación con datos experimentales usando detectores de centelleo
+* Integración con **FLUKA** para cálculos de dosis más precisos
+* Extensión del modelo a partículas adicionales (neutrones y electrones)
 
----
 
 # 👨‍🔬 Autor
 
