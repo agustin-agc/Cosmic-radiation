@@ -48,7 +48,7 @@ Comprender estos efectos es clave para mejorar los modelos de **radiación atmos
 
 > Comparación entre el **Modelo Simulado** $D_{\mathrm{total}}(h)$ y el **Modelo ISNAP** $D_{\mathrm{ideal}}(h)$, junto con tabla de valores cada 1 km.
 
-![dosis_comparacion](comparison of models.png.png)
+![dosis_comparacion](comparisonofmodels.png)
 
 ---
 
