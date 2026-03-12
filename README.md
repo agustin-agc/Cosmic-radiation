@@ -44,76 +44,15 @@ El estudio del flujo de partículas secundarias permite:
 Comprender estos efectos es clave para mejorar los modelos de **radiación atmosférica** y contribuir al monitoreo de la exposición radiológica en aviación.
 
 
----
+### 📈 Comparación de modelos de dosis
 
-# ⚙️ Metodología
+> Comparación entre el **Modelo Simulado** $D_{\mathrm{total}}(h)$ y el **Modelo ISNAP** $D_{\mathrm{ideal}}(h)$, junto con tabla de valores cada 1 km.
 
-El proyecto combina varias etapas.
-
-## 1. Simulación de cascadas atmosféricas
-
-Se utilizan simulaciones **Monte Carlo con CORSIKA** para modelar la interacción de rayos cósmicos con la atmósfera.
-
-Configuración principal:
-
-* Modelo hadrónico de alta energía: **SIBYLL 2.3e**
-* Modelo de baja energía: **GHEISHA**
-* Geometría atmosférica curva
-* Producción explícita de muones
-
-Las simulaciones generan archivos con las partículas secundarias detectadas.
+![dosis_comparacion](comparasion of models.png)
 
 ---
 
-## 2. Procesamiento de datos
 
-Los resultados de las simulaciones se analizan usando herramientas en **Python y ROOT** para:
-
-* identificar muones detectados
-* calcular el flujo de partículas
-* estudiar variaciones con la altitud
-
----
-
-## 3. Conversión a dosis de radiación
-
-A partir del flujo de muones se estima la **dosis equivalente de radiación** utilizando modelos simplificados de deposición de energía.
-
-Se comparan dos aproximaciones.
-
-**Modelo idealizado**
-
-[
-D(h) = 0.0375 \cdot 2^{h/1500}
-]
-
-**Modelo basado en simulación**
-
-La dosis se calcula utilizando el flujo simulado de muones y su contribución relativa a la radiación total.
-
----
-
-# 📊 Resultados esperados
-
-El proyecto permite:
-
-* estudiar cómo varía el flujo de muones con la altitud
-* comparar modelos teóricos con simulaciones
-* estimar dosis de radiación en vuelos comerciales
-* validar simulaciones con datos experimentales
-
----
-
-# 🧪 Aplicaciones
-
-Este tipo de análisis es relevante en:
-
-* **física de astropartículas**
-* **radiación en aviación**
-* **monitoreo atmosférico**
-* **detectores de rayos cósmicos**
-
----
 
 # 🚀 Trabajo futuro
 
