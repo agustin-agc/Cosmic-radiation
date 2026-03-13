@@ -45,6 +45,11 @@ Comprender estos efectos es clave para mejorar los modelos de **radiación atmos
 
 
 ### 📈 Comparación de modelos de dosis
+El ISNAP (Institute for Structure and Nuclear Astrophysics) de la Universidad de Notre Dame, proponen un modelo el cual duplica la radición cósmica cada 1,5 Kilometros.
+
+Desarrollé un modelo simulado tomando como referencia el del ISNAP, para ello tome en cuenta valores como el flujo de muones, altitudes, la dosis aportada por cada muón y además, una fraccion atribuible a los muones, la cual varia con la altura, esto teniendo en cuenta que a mayores alturas, distintas particulas tienen mayores contribución en decaimiento de rayos cosmicos. 
+
+Con ello la comparacón de modelos entre el simulado y el propuesto por el ISNAP tienen un error promedio de 6.7% hasta los 12 kilometros, valor que nos permite utilizarlo como formula para convertir la medicion experimental en una dosis de radiación
 
 > Comparación entre el **Modelo Simulado** $D_{\mathrm{total}}(h)$ y el **Modelo ISNAP** $D_{\mathrm{ideal}}(h)$, junto con tabla de valores cada 1 km.
 
